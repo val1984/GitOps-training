@@ -34,3 +34,14 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+  test1:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: test after build
+        run: echo "after build"
+  test2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test in parallel with build
+        run: echo "parallel with build"
