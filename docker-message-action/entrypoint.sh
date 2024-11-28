@@ -10,4 +10,4 @@ echo "Votre message : $MESSAGE" > /output/message.txt
 echo "Message généré : $MESSAGE"
 
 # Définir la sortie de l'action
-echo "::set-output name=output-message::Votre message : $MESSAGE"
+echo "name=output-message::Votre message : $MESSAGE >> $GITHUB_OUTPUT"
