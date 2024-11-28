@@ -1,0 +1,19 @@
+name: "Exemple de workflow"
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  greet-user:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Dire bonjour
+      uses: ./greet-user-action # Utilise l'action locale
+      with:
+        username: "Jean"
+        greeting: "Salut"
