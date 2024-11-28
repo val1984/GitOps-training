@@ -3,6 +3,8 @@
 # Lire le message depuis les arguments
 MESSAGE="$1"
 
+mkdir -p /output
+
 # Générer un fichier contenant le message
 echo "Votre message : $MESSAGE" > /output/message.txt
 
